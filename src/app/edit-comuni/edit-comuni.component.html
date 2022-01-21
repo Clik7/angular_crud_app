@@ -1,0 +1,14 @@
+<div class="container">
+  <form class="row g-3">
+      <div class="input-group my-3">
+          <input type="text" class="form-control col-md-10" [(ngModel)]="editComune.nome" name="nome" placeholder="Nome comune">
+          <select class="form-select" [(ngModel)]="editComune.provincia" name="provincia" aria-label="Default select example" >
+              <option selected>Provincia</option>
+              <option  *ngFor="let item of prov" [ngValue]="item" >{{item.nome}}</option>
+          </select>
+      </div>
+     <div class="col-12 text-center m-3">
+        <button type="submit" class="btn btn-dark bgroundcolor" (click)="saveEditComune(editComune)" [routerLink]="['/comuni']" routerLinkActive="router-link-active">Modifica comune</button>
+      </div> 
+    </form>
+</div>

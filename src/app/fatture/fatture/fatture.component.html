@@ -1,0 +1,53 @@
+<table class="table table-dark table-striped my-5">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">data</th>
+        <th scope="col">numero</th>
+        <th scope="col">anno</th>
+        <th scope="col">importo</th>
+        <th scope="col">stato</th>
+        <th scope="col"><button class=" m-1 btn btn-sm btn-warning" [routerLink]="['/addFatture']" routerLinkActive="router-link-active"><i class="bi bi-plus-square-fill"></i></button></th>
+        
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let item of fatture; index as i">
+        <th scope="row">{{item.id}}</th>
+        
+        <td>{{item.data}}</td>
+        <td>{{item.numero}}</td>
+        <td>{{item.anno}}</td>
+        <td>{{item.importo}}</td>
+        <td>{{item.stato.nome}}</td>
+        
+
+    
+        <td>
+            <!--Ricordati funzione che elimina e dettagli-->
+            <button class=" m-1 btn btn-sm btn-danger" (click)="removeFatture(item)"><i class="bi bi-archive-fill"></i></button>  
+            <button class=" m-1 btn btn-sm btn-warning"(click)="showFatture(item)"><i class="bi bi-binoculars-fill"></i></button>
+        </td>
+      </tr> 
+     
+    </tbody>
+  </table>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let num of pageNumbers">
+        <a class="page-link" href="fatture/page/{{num}}">{{num +1}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+

@@ -1,0 +1,46 @@
+<div class="row row-cols-1 row-cols-md-2 g-4 m-4">
+    <div class="col">
+      <div class="card my-2">
+        
+        <div class="card-body">
+         
+          <h5 class="card-title text-center">Clienti</h5>
+          <button class="btn" [routerLink]="['/users']" routerLinkActive="router-link-active"><i class="bi bi-person-lines-fill"></i></button>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card my-2">
+        
+        <div class="card-body">
+            
+          <h5 class="card-title text-center">Province</h5>
+        <button class="btn" [routerLink]="['/province']" routerLinkActive="router-link-active"><fa-icon [icon]="faBuilding"></fa-icon></button>
+         
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card my-2">
+        
+        <div class="card-body">
+           
+          <h5 class="card-title text-center">Comuni</h5>
+          <button class="btn" [routerLink]="['/comuni']" routerLinkActive="router-link-active"><fa-icon [icon]="faHome"></fa-icon></button>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card my-2">
+
+        <div class="card-body text-center">
+            
+          <h5 class="card-title">Fatture</h5>
+          <button class="btn"  [routerLink]="['/fatture']" routerLinkActive="router-link-active"><fa-icon [icon]="faFileInvoice"></fa-icon></button>
+         
+        </div>
+      </div>
+    </div>
+  </div>

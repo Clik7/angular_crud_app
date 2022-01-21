@@ -1,0 +1,13 @@
+.bground{
+    background-color: rgb(255, 210, 10);
+}
+
+.home {
+    color: black;
+}
+
+.buttonDirection {
+
+    position: absolute;
+    left: 94%;
+}
